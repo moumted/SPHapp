@@ -2,6 +2,10 @@ import axios from 'axios'
 import nprogress from 'nprogress'
 ///引入进度条的样式
 import 'nprogress/nprogress.css'
+
+
+// 引入store
+import store from '@/store'
 //创建axios实例
 //1.配置对象:
 //    baseURL 基础路径
@@ -16,6 +20,16 @@ const requests = axios.create({
 requests.interceptors.request.use((config)=>{
     //触发进度条
     nprogress.start()
+
+    // console.log(store);
+    // 将用户临时身份添加到请求头中
+    if(store.state.detail.uuid_token){
+        config.headers.userTempId = store.state.detail.uuid_token
+    }
+
+    if(store.state.user.token){
+        config.headers.token = store.state.user.token
+    }
     return config
 })
 

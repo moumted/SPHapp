@@ -27,6 +27,10 @@ export default {
         Floor,
         Like,
         Rank
+    },
+    mounted(){
+        // 获取用户信息
+        this.$store.dispatch('getUserInfo')
     }
 }
 </script>

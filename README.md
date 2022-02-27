@@ -82,6 +82,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     全局事件总线：$bus 全能
     插槽
     pubsub-js：vue中几乎不用 全能
+8.scrollBehavior (to, from, savedPosition)
+    使用前端路由，当切换到新路由时，想要页面滚到顶部，或者是保持原先的滚动位置，就像重新加载页面那样，可以使用vue-router
+    中的scrollBehavior
 
 
 补充：
@@ -91,4 +94,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
         name : ''
         meta : {show:false}
     ]
-
+2.本地存储为HTML5中新增的，分为本地存储和会话存储
+    本地存储为持久化的 
+    会话存储非永久，会话结束就消失
+    ·本地存储和会话存储存储的为对象

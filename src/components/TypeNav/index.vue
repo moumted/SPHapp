@@ -14,8 +14,8 @@
                   :key="c1.categoryId"
                   :class="{ cur: currentIndex == index }"
                   >
-                  <h3 @mouseover="changeIndex(index)" :data-categoryName="c1.categoryName" :data-category1id="c1.categoryId">
-                      <a>{{ c1.categoryName }}</a>
+                  <h3 @mouseover="changeIndex(index)" >
+                      <a :data-categoryName="c1.categoryName" :data-category1id="c1.categoryId">{{ c1.categoryName }}</a>
                   </h3>
                   <div class="item-list clearfix">
 
@@ -26,15 +26,15 @@
                       :key="c2.categoryId"
                       >
                       <dl class="fore">
-                          <dt :data-categoryName="c2.categoryName" :data-category2id="c2.categoryId">
-                          <a>{{ c2.categoryName }}</a>
+                          <dt>
+                          <a :data-categoryName="c2.categoryName" :data-category2id="c2.categoryId">{{ c2.categoryName }}</a>
                           </dt>
                           <dd>
                           <em
                               v-for="(c3, index) in c2.categoryChild"
                               :key="c3.categoryId"
-                              :data-categoryName="c3.categoryName" :data-category3id="c3.categoryId">
-                              <a>{{ c3.categoryName }}</a>
+                              >
+                              <a :data-categoryName="c3.categoryName" :data-category3id="c3.categoryId">{{ c3.categoryName }}</a>
                           </em>
                           </dd>
                       </dl>

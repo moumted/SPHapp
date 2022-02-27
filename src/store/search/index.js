@@ -21,15 +21,15 @@ const actions = {
 //此时形参state是指的当前仓库中的state
 const getters = {
     goodsList(state){
-        console.log(123123,state);
+        // console.log(123123,state);
         return state.searchList.goodsList || []
     },
     attrsList(state){
-        console.log(123123,state);
+        // console.log(123123,state);
         return state.searchList.attrsList || []
     },
     trademarkList(state){
-        console.log(123123,state);
+        // console.log(123123,state);
         return state.searchList.trademarkList || []
     }
 };
